@@ -1,5 +1,8 @@
 function reverseString(str) {
-  // type your code here
+  if (str.length === 0) return '';
+  if (str.length === 1) return str;
+
+  return reverseString(str.slice(1)) + str[0];
 }
 
 if (require.main === module) {
